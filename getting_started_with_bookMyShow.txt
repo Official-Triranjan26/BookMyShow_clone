@@ -1,0 +1,53 @@
+project 4 : BookMyShow
+-----------------------
+>>BackEnd :
+-----------
+	1.movie-db (api)
+
+>>FrontEnd :
+-----------
+	1.react
+	2.tailwind
+	3.react-slick(crousal)
+	4.react-icons(icons)
+	5.react-context-api(state management in react,inbuilt with react)
+	6.axios(for fetching APIs)
+	7.headlessUI(tailwind UI components)
+	
+
+pages
+------
+	> Home.page.jsx
+	> Movie.page.jsx
+	> Play.page.jsx
+
+HOC(layouts)
+------------
+	Default.HOC.jsx
+	Movie.HOC.jsx
+	<nav>
+	<footer>
+	and many more.....
+
+Components
+-----------
+	> cast > Cast.component.jsx
+
+	> entertentment > EnterntentmentCard.jsx
+
+	> heroCarousal 	> HeroCarousal.component.jsx 
+					> Arrows.component.jsx
+
+	> movieHero	> MovieHero.component.jsx
+				> MovieInfo.component.jsx
+
+	> navbar	> MovieNavbar.component.jsx
+				> Navbar.component.jsx
+
+	> paymentModal	> Payment.component.jsx
+
+	> playFilters	> PlayFilters.component.jsx
+
+	> poster	> Poster.component.jsx
+
+	> posterSlider	> PosterSlider.component.jsx
