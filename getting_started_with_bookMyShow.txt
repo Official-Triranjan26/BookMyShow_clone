@@ -8,11 +8,12 @@ project 4 : BookMyShow
 -----------
 	1.react
 	2.tailwind
-	3.react-slick(crousal)
+	3.react-slick(crousal) & slick-carousel (css of carousel)
 	4.react-icons(icons)
 	5.react-context-api(state management in react,inbuilt with react)
 	6.axios(for fetching APIs)
 	7.headlessUI(tailwind UI components)
+	8.react-router-dom (for routing)
 	
 
 pages
