@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { MovieContext } from "../context/Movie.context";
 import MovieLayoutHoc from "../layout/Movie.layout";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Component"
+import MovieHero from "../components/MovieHero/MovieHero.Component";
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
 
 const MoviePage = () => {
@@ -119,7 +120,7 @@ const MoviePage = () => {
 
   return (
     <>
-      {/* <MovieHero/> */}
+      <MovieHero/>
 
       <div className="my-12 container px-4 lg-ml-20 lg:w-2/3">
         {/* About the movie title */}

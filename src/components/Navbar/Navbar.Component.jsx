@@ -11,7 +11,7 @@ function NavSm() {
         <div>
           <h3 className="text-xl font-bold">It All Starts Here!</h3>
           <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
-            Delhi NCR <BiChevronDown />
+            Kolkata<BiChevronDown />
           </span>
         </div>
         <div className="w-8 h-8">
@@ -73,7 +73,7 @@ function NavLg() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white">
-            Delhi NCR <BiChevronDown />
+            Kolkata <BiChevronDown />
           </span>
           <Link
             to="/plays"
