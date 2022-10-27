@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import { MovieContext } from "../../context/Movie.context";
 import MovieInfo from "./MovieInfo.Component";
 
+
+
 const MovieHero = () => {
   const { movie } = useContext(MovieContext);
+  const { rentMovie, buyMovie}=useContext(MovieContext)
   const genres = movie.genres?.map(({ name }) => name).join(", ");
   //if genres is present then map through its elements ...only take the names and create a array with the names...then join them with ' , '
   return (
@@ -30,13 +33,13 @@ const MovieHero = () => {
           </div>
           <div className="flex items-center gap-3 md:px-4 md:w-screen text-xl px-4">
             <button
-              // onClick={rentMovie}
+              onClick={rentMovie}
               className="bg-red-500 w-full py-3 text-white font-semibold rounded-lg"
             >
               Rent ₹149
             </button>
             <button
-              // onClick={buyMovie}
+              onClick={buyMovie}
               className="bg-red-600 w-full py-3 text-white font-semibold rounded-lg"
             >
               Buy ₹599

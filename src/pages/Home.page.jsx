@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../index.css";
 //Components
@@ -7,7 +7,6 @@ import HeroCarousal from "../components/HeroCarousal/HeroCarousal.Component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 //Layout HOC
 import DefaultLayoutHoc from "../layout/Default.layout";
-
 
 const HomePage = () => {
   const [recommandedMovies, setRecommendedMovies] = useState([]);
@@ -53,17 +52,25 @@ const HomePage = () => {
 
       <HeroCarousal />
 
+      <div className="container mx-auto px-4 md:px-12 my-10">
+        <img
+          src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"
+          alt="logo"
+          className="w-full h-full"
+        />
+      </div>
+
       {/* Emterntenment card slider */}
 
-      <div className="container mx-auto px-4 md:px-12 my-8">
-          <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3">
-            Best of Enterntentment
-          </h1>
-          <EnterntentmentCardSlider />
+      <div className="container mx-auto px-4 md:px-12 my-10">
+        <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3">
+          Best of Enterntentment
+        </h1>
+        <EnterntentmentCardSlider />
       </div>
 
       {/* Recommanded Movies */}
-      
+
       <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
           title="Recommanded Movies"

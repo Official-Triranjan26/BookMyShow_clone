@@ -1,9 +1,9 @@
-import React,{useState} from 'react'
-import HeroSlider from "react-slick" ;
-import {NextArrow , PrevArrow} from "./Arrows.Component"
+import React, { useState } from "react";
+import HeroSlider from "react-slick";
+import { NextArrow, PrevArrow } from "./Arrows.Component";
 
 const HeroCarousal = () => {
-  const [images,setImages]=useState([
+  const [images, setImages] = useState([
     {
       adult: false,
       backdrop_path: "/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg",
@@ -37,7 +37,58 @@ const HeroCarousal = () => {
       video: false,
       vote_average: 7.4,
       vote_count: 346,
-    }, 
+    },
+    {
+      adult: false,
+      backdrop_path: "/d6MhreFdMHONqX3iZlJGCF8UkIt.jpg",
+      genre_ids: [28, 12, 14],
+      id: 436270,
+      original_language: "en",
+      original_title: "Black Adam",
+      overview:
+        "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+      popularity: 4416.78,
+      poster_path: "/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg",
+      release_date: "2022-10-19",
+      title: "Black Adam",
+      video: false,
+      vote_average: 7.1,
+      vote_count: 501,
+    },
+    {
+      adult: false,
+      backdrop_path: "/tIX6j3NzadlwGcJ52nuWdmtOQkg.jpg",
+      genre_ids: [27, 53, 9648],
+      id: 717728,
+      original_language: "en",
+      original_title: "Jeepers Creepers: Reborn",
+      overview:
+        "Forced to travel with her boyfriend to a horror festival, Laine begins to experience disturbing visions associated with the urban legend of The Creeper. As the festival arrives and the blood-soaked entertainment builds to a frenzy, she becomes the center of it while something unearthly has been summoned.",
+      popularity: 3132.91,
+      poster_path: "/aGBuiirBIQ7o64FmJxO53eYDuro.jpg",
+      release_date: "2022-09-15",
+      title: "Jeepers Creepers: Reborn",
+      video: false,
+      vote_average: 5.8,
+      vote_count: 358,
+    },
+    {
+      adult: false,
+      backdrop_path: "/y5Z0WesTjvn59jP6yo459eUsbli.jpg",
+      genre_ids: [27, 53],
+      id: 663712,
+      original_language: "en",
+      original_title: "Terrifier 2",
+      overview:
+        "After being resurrected by a sinister entity, Art the Clown returns to Miles County where he must hunt down and destroy a teenage girl and her younger brother on Halloween night.  As the body count rises, the siblings fight to stay alive while uncovering the true nature of Art's evil intent.",
+      popularity: 4620.725,
+      poster_path: "/yw8NQyvbeNXoZO6v4SEXrgQ27Ll.jpg",
+      release_date: "2022-10-06",
+      title: "Terrifier 2",
+      video: false,
+      vote_average: 7.5,
+      vote_count: 128,
+    }
   ]);
 
   const settingsLG = {
@@ -49,8 +100,8 @@ const HeroCarousal = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 4000,
+    speed: 500,
+    autoplaySpeed: 2500,
     cssEase: "linear",
   };
 
@@ -66,35 +117,35 @@ const HeroCarousal = () => {
 
   return (
     <>
-        <div className="lg:hidden">
-          <HeroSlider {...settings}>
-            {images.map((images, index) => (
-              <div className="w-full h-56 md:h-80 py-3" key={index}>
-                <img
-                  src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
-                  alt="Hero Banner"
-                  className="w-full h-full rounded-md object-cover"
-                />
-              </div>
-            ))}
-          </HeroSlider>
-        </div>
+      <div className="lg:hidden">
+        <HeroSlider {...settings}>
+          {images.map((images, index) => (
+            <div className="w-full h-56 md:h-80 py-3" key={index}>
+              <img
+                src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
+                alt="Hero Banner"
+                className="w-full h-full rounded-md object-cover"
+              />
+            </div>
+          ))}
+        </HeroSlider>
+      </div>
 
-        <div className="hidden lg:block">
-          <HeroSlider>
-            {images.map((images) => (
-              <div className="w-full h-96 px-2 py-3">
-                <img
-                  src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
-                  alt="Hero Banner"
-                  className="w-full h-full rounded-md object-cover"
-                />
-              </div>
-            ))}
-          </HeroSlider>
-        </div>
+      <div className="hidden lg:block">
+        <HeroSlider {...settingsLG}>
+          {images.map((images) => (
+            <div className="w-full h-96 px-2 py-3">
+              <img
+                src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
+                alt="Hero Banner"
+                className="w-full h-full rounded-md object-cover"
+              />
+            </div>
+          ))}
+        </HeroSlider>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default HeroCarousal
+export default HeroCarousal;

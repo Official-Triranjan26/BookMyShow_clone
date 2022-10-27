@@ -1,6 +1,6 @@
 import React from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 
 
 const PaymentModal = ({isOpen,setIsOpen,price}) => {
@@ -9,11 +9,11 @@ const PaymentModal = ({isOpen,setIsOpen,price}) => {
       };
       const launchRazorPay = () => {
         let options = {
-          key: "rzp_test_Taf4Olo2TluDGc",
+          key: "rzp_test_vva8kzw6OMJgrw",
           amount: price * 100,
           currency: "INR",
           name: "Book My Show Clone",
-          description: "Movie purchase or rental",
+          description: "Don't pay ! It is for testing",
           image:
             "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png",
           handler: () => {
