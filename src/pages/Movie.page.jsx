@@ -3,9 +3,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MovieContext } from "../context/Movie.context";
 import MovieLayoutHoc from "../layout/Movie.layout";
-import PosterSlider from "../components/PosterSlider/PosterSlider.Component"
+import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 import MovieHero from "../components/MovieHero/MovieHero.Component";
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
+import Slider from "react-slick";
+import Cast from "../components/cast/Cast.Component";
+import PaymentModal from "../components/PaymentModal/Payment.Component";
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -120,7 +123,7 @@ const MoviePage = () => {
 
   return (
     <>
-      <MovieHero/>
+      <MovieHero />
 
       <div className="my-12 container px-4 lg-ml-20 lg:w-2/3">
         {/* About the movie title */}
@@ -175,8 +178,18 @@ const MoviePage = () => {
         </div>
 
         {/* Cast slider */}
-        <div>
-          cast & crew
+        <div className="my-8">
+          Cast and Crue
+          <h2 className="text-gray-800 font-bold text-2xl mb-2"></h2>
+          <Slider {...settingCast}>
+           {cast.map((castData)=>(
+             <Cast
+             image={castData.profile_path}
+             castName={castData.original_name}
+             role={castData.character}
+           />
+           ))}
+          </Slider>
         </div>
 
         <div className="my-8">
